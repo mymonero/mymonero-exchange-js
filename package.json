@@ -14,7 +14,7 @@
     "monerotobitcoin",
     "monero-to-bitcoin"
   ],
-  "author": "Karl Buys",
+  "author": "MyMonero",
   "license": "BSD-3-Clause",
   "dependencies": {
     "axios": "^0.20.0"
