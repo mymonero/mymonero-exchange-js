@@ -1,0 +1,22 @@
+{
+  "name": "mymonero-exchange",
+  "version": "0.1.2",
+  "description": "This module is used by the desktop and web versions of the MyMonero wallet to facilitate the exchange of XMR into other cryptocurrencies. It can be used to facilitate transactions where a user converts one cryptocurrency into another.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cryptocurrency-conversion",
+    "cryptocurrency-exchange",
+    "mymonero",
+    "xmrtobtc",
+    "monerotobitcoin",
+    "monero-to-bitcoin"
+  ],
+  "author": "Karl Buys",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "axios": "^0.20.0"
+  }
+}
