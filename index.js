@@ -16,7 +16,7 @@ class ExchangeFunctions {
         //this.fetch = fetch;
     }
 
-    getExchangeConfiguration() {
+    initialiseExchangeConfiguration() {
         let self = this;
         // When the new endpoint goes live, we'll uncomment the flow below
         // return new Promise((resolve, reject) => {
