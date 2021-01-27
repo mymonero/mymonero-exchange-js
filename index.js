@@ -35,11 +35,11 @@ class ExchangeFunctions {
                 "referrer_info": {
                     "indacoin": {
                         "referrer_id": "MYM12314",
-                        "enabled": true
+                        "enabled": false
                     }, 
                     "localmonero": {
-                        "referrer_id": "LM234314",
-                        "enabled": false
+                        "referrer_id": "h2t1",
+                        "enabled": true
                     }
                 },
                 "btc": {
