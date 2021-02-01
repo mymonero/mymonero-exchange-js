@@ -20,49 +20,51 @@ class ExchangeFunctions {
         let self = this;
         // When the new endpoint goes live, we'll uncomment the flow below
         return new Promise((resolve, reject) => {
-        //     let endpoint = `${self.apiUrl}/get_exchange_configuration`;
-        //     axios.get(endpoint, data)
-        //         .then((response) => {
-        //             self.exchangeConfiguration = response;
-        //             resolve(response);
-        //         }).catch((error) => {
-        //             reject(error);
-        //         })
+             let endpoint = `${self.apiUrl}/get_exchange_configuration`;
+             axios.get(endpoint)
+                .then((response) => {
+                    self.exchangeConfiguration = response;
+                    resolve(response);
+                }).catch((error) => {
+                    console.log("Unable to retrieve exchange configuration -- assume defaults");
+                    let data = {
+                        "referrer_info": {
+                            "indacoin": {
+                                "referrer_id": "MYM12314",
+                                "enabled": false
+                            }, 
+                            "localmonero": {
+                                "referrer_id": "h2t1",
+                                "enabled": true
+                            }
+                        },
+                        "btc": {
+                            "changenow": {
+                                "exchange_workflow": "prepopulates_limits"
+                            },
+                            "xmrto": {
+                                "exchange_workflow": "prepopulate_limits",
+                            },
+                            "coinswitch": {
+                                "exchange_workflow": "returns_limits_on_offer"
+                            }
+                        },
+                        "eth": {
+                            "changenow": {
+                                "exchange_workflow": "prepopulates_limits",
+                            },
+                            "coinswitch": {
+                                "exchange_workflow": "returns_limits_on_offer"
+                            }
+                        },
+                }
+                resolve(data);
+                    reject(error);
+                })
         
 
             // For now, here's our dummy data
-            let data = {
-                "referrer_info": {
-                    "indacoin": {
-                        "referrer_id": "MYM12314",
-                        "enabled": false
-                    }, 
-                    "localmonero": {
-                        "referrer_id": "h2t1",
-                        "enabled": true
-                    }
-                },
-                "btc": {
-                    "changenow": {
-                        "exchange_workflow": "prepopulates_limits"
-                    },
-                    "xmrto": {
-                        "exchange_workflow": "prepopulate_limits",
-                    },
-                    "coinswitch": {
-                        "exchange_workflow": "returns_limits_on_offer"
-                    }
-                },
-                "eth": {
-                    "changenow": {
-                        "exchange_workflow": "prepopulates_limits",
-                    },
-                    "coinswitch": {
-                        "exchange_workflow": "returns_limits_on_offer"
-                    }
-                },
-            }
-            resolve(data);
+            
         });
     }
 
