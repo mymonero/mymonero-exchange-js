@@ -1,3 +1,8 @@
+# **As of April 6th, the MyMonero Exchange JS library has now been moved into the MyMonero Utils mono-repo**. Please find up-to-date versions of this library at [this URL](https://github.com/mymonero/mymonero-utils).
+
+## No further development will take place on this repository. The README's original contents are preserved below:
+
+
 This npm module is used by the desktop and web versions of the [MyMonero wallet](https://github.com/mymonero/mymonero-app-js) to facilitate the exchange of XMR into other cryptocurrencies. Anyone can make use of it to facilitate cryptocurrency exchange.
 
 The present state of this module allows for XMR to be exchanged for BTC.
